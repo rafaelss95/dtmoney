@@ -1,12 +1,12 @@
-import { useState } from "react";
-import ReactModal from "react-modal";
-import { GlobalStyle } from "./assets/styles/global";
-import { Dashboard } from "./components/Dashboard";
-import { Header } from "./components/Header";
-import { NewTransactionModal } from "./components/NewTransactionModal";
-import { TransactionsProvider } from "./hooks";
+import { useState } from 'react';
+import ReactModal from 'react-modal';
+import { GlobalStyle } from './assets/styles/global';
+import { Dashboard } from './components/Dashboard';
+import { Header } from './components/Header';
+import { NewTransactionModal } from './components/NewTransactionModal';
+import { TransactionsProvider } from './hooks';
 
-ReactModal.setAppElement("#root");
+ReactModal.setAppElement('#root');
 
 export function App() {
   const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] =

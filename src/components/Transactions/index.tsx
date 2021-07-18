@@ -1,6 +1,6 @@
-import { asCurrency, asDate } from "../../formatters";
-import { useTransactions } from "../../hooks/useTransactions";
-import { Container } from "./styles";
+import { asCurrency, asDate } from '../../formatters';
+import { useTransactions } from '../../hooks/useTransactions';
+import { Container } from './styles';
 
 export function Transactions() {
   const { transactions } = useTransactions();
@@ -21,7 +21,7 @@ export function Transactions() {
             <tr key={transaction.id}>
               <td>{transaction.title}</td>
               <td className={transaction.type}>
-                {transaction.type === "withdraw" ? "- " : ""}
+                {transaction.type === 'withdraw' ? '- ' : ''}
                 {asCurrency(transaction.amount)}
               </td>
               <td>{transaction.category}</td>

@@ -1,9 +1,9 @@
-import incomeImg from "../../assets/income.svg";
-import outcomeImg from "../../assets/outcome.svg";
-import totalImg from "../../assets/total.svg";
-import { asCurrency } from "../../formatters";
-import { useTransactions } from "../../hooks/useTransactions";
-import { Container } from "./styles";
+import incomeImg from '../../assets/income.svg';
+import outcomeImg from '../../assets/outcome.svg';
+import totalImg from '../../assets/total.svg';
+import { asCurrency } from '../../formatters';
+import { useTransactions } from '../../hooks/useTransactions';
+import { Container } from './styles';
 
 export function Summary() {
   const { transactions } = useTransactions();
@@ -11,7 +11,7 @@ export function Summary() {
     (accumulator, currentValue) => {
       return {
         ...accumulator,
-        ...(currentValue.type === "deposit"
+        ...(currentValue.type === 'deposit'
           ? {
               deposits: accumulator.deposits + currentValue.amount,
               total: accumulator.total + currentValue.amount,
@@ -22,7 +22,7 @@ export function Summary() {
             }),
       };
     },
-    { deposits: 0, withdraws: 0, total: 0 }
+    { deposits: 0, withdraws: 0, total: 0 },
   );
 
   return (

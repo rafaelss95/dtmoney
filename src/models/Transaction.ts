@@ -4,10 +4,10 @@ export type TransactionRead = Readonly<{
   createdAt: string;
   id: number;
   title: string;
-  type: "deposit" | "withdraw";
+  type: 'deposit' | 'withdraw';
 }>;
 
 export type TransactionCreate = Pick<
   TransactionRead,
-  "amount" | "category" | "title" | "type"
+  'amount' | 'category' | 'title' | 'type'
 >;

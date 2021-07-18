@@ -1,6 +1,6 @@
-import { Summary } from "../Summary";
-import { Transactions } from "../Transactions";
-import { Container } from "./styles";
+import { Summary } from '../Summary';
+import { Transactions } from '../Transactions';
+import { Container } from './styles';
 
 export function Dashboard() {
   return (
